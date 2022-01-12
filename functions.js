@@ -15,12 +15,17 @@
  * - returns the sum of only the ODD numbers
  *
  * e.g.
- * sumOdds([1, 2, 3, 4, 5, 6, 7, 8, 9]) -> 25
+ * sumOdds([1, 2, 3, 4, 5, 6, 7, 8, 9]) 
  * sumOdds([3, 7, 8, 15, 2, 1, 13]) -> 39
  */
 function sumOdds(numbers) {
   // Your code here
+  return numbers.filter((number) => 
+  number => number%3===0).reduce((acc,cur) => acc + cur,0);
 }
+ 
+
+
 // console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
 
 /**
@@ -38,6 +43,7 @@ function sumOdds(numbers) {
  */
 function characterCount(string, c) {
   // Your code here
+  return characters.filter((character) => character.some((c).toLawerCase()) === c );
 }
 // console.log(characterCount("Character Count is clever", "c"));
 
@@ -58,6 +64,7 @@ function characterCount(string, c) {
  * largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]) -> 545
  */
 function largestIncrement(numbers) {
+  
   // Your code here
 }
 // console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
@@ -74,6 +81,7 @@ function largestIncrement(numbers) {
  * afterX([11, 35, 52, 14, 56, 601, 777, 888, 999], 52) -> [14, 56, 601, 777, 888, 999]
  */
 function afterX(numbers, x) {
+  return numbers.splice(numbers.indexOf(x)+1);
   // Your code here
 }
 // console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
@@ -91,6 +99,8 @@ function afterX(numbers, x) {
  */
 function abbreviate(firstName, lastName) {
   // Your code here
+  return firstName.toUpperCase()[0] + lastName.toUpperCase()[0];
+
 }
 // console.log(abbreviate("miss", "Stephane"));
 
@@ -122,6 +132,7 @@ function isUpperCase(string) {
  */
 function elementInArray(numbers, x) {
   // Your code here
+  return numbers.some(number => number === x);
 }
 // console.log(elementInArray([5, 6, 7], 8));
 
